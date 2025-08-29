@@ -1,0 +1,189 @@
+ body {
+            display: flex;
+            background-color: #1a1a1a;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            height: 100vh;
+            background-image: url("dragon background.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        /* Sidebar styling */
+        #sidebar {
+            width: 250px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            border-right: 2px solid #2962FF;
+            box-shadow: 2px 0 10px rgba(41, 98, 255, 0.3);
+            z-index: 100;
+        }
+
+        /* Main menu styling */
+        #mainMenu {
+            text-align: center;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+/* Options menu styling */
+#optionsMenu {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 200;
+    border: 2px solid #00B0FF;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+        /* Game container hidden initially */
+        #gameContainer {
+            justify-content: center;
+            display: none;
+            position: fixed;
+            margin-left: 470px; /* Account for sidebar width */
+            padding: 20px;
+            flex: 1;
+            height: 100vh;
+        }
+        
+        /* Game container when visible */
+        #gameContainer.visible {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Game canvas styling */
+        canvas {
+            border: 3px solid #2962FF;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(41, 98, 255, 0.3);
+        }
+
+        /* Common button styling */
+        .menuButton {
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 25px;
+            width: 200px;
+            transition: transform 0.3s;
+        }
+
+        .menuButton:hover {
+            transform: scale(1.05);
+        }
+
+        /* Difficulty buttons styling */
+        .difficultyButton {
+            width: 150px;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        /* Score display styling */
+        #score {
+            font-size: 24px;
+            margin: 10px;
+            color: red;
+        }
+
+        /* Game over overlay styling */
+        #gameOver {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid #2962FF;
+            text-align: center;
+        }
+
+        /* Exit confirmation dialog */
+        #exitDialog {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid #FF4081;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 0 30px rgba(255, 64, 129, 0.4);
+        }
+
+        #exitDialog h2 {
+            color: #FF4081;
+            margin-bottom: 20px;
+        }
+
+        #exitDialog .dialogButtons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        #exitDialog .dialogButton {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        #exitDialog .dialogButton:hover {
+            transform: scale(1.05);
+        }
+
+        #exitDialog .confirmExit {
+            background: linear-gradient(45deg, #FF4081, #F50057);
+            color: white;
+        }
+
+        #exitDialog .cancelExit {
+            background: linear-gradient(45deg, #2962FF, #00B0FF);
+            color: white;
+        }
+
+        .Logo {
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .logotitle{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 50px;
+            background-color: white;
+        }

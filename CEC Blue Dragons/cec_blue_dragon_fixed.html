@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CEC Blue Dragon</title>
+    <link rel="shortcut icon" href="a50d7b4a-9d8f-4a2f-8706-98797182b1c9.jpg" type="image/x-icon" class="Logo">
+    <link rel="stylesheet" href="cec_blue_dragon_fixed.css" >
+    <script defer src="cec_blue_dragon_fixed.js"></script>
+</head>
+<body>
+    <div id="sidebar">
+        <!-- Game title -->
+        <h1 style="color: #4919e8; text-shadow: 0 0 10px rgba(18, 8, 223, 0.5);" class="logotitle">CEC Blue Dragon</h1>
+
+        <!-- Main menu -->
+        <div id="mainMenu">
+            <button style="background-color: blue;" class="menuButton" id="playButton">Play</button>
+            <button style="background-color: blue;" class="menuButton" id="optionsButton">Options</button>
+            <button style="background-color: blue;" class="menuButton" id="infoButton">Info</button>
+            <button style="background-color: blue;" class="menuButton" id="exitButton">Exit</button>
+        </div>
+    </div>
+
+    <!-- Options menu -->
+    <div id="optionsMenu">
+        <button style="background-color: green;" class="menuButton difficultyButton" data-difficulty="easy">Easy</button>
+        <button style="background-color: yellow;" class="menuButton difficultyButton" data-difficulty="medium">Medium</button>
+        <button style="background-color: orangered;" class="menuButton difficultyButton" data-difficulty="hard">Hard</button>
+        <button style="background-color: red;" class="menuButton difficultyButton" data-difficulty="extreme">Extreme</button>
+    </div>
+
+    <!-- Game container -->
+    <div id="gameContainer">
+        <div id="score">Score: 0</div>
+        <canvas id="gameCanvas" width="600" height="400"></canvas>
+
+        <!-- Game control buttons -->
+        <div id="gameControls" style="margin-top: 15px; text-align: center;">
+            <button style="background-color: rgb(7, 110, 150);" class="menuButton" id="pauseButton" style="width: 120px; margin: 5px;">Pause</button>
+            <button style="background-color: rgb(7, 110, 150);" class="menuButton" id="resumeButton" style="width: 120px; margin: 5px; display: none;">Resume</button>
+            <button style="background-color: rgb(7, 110, 150);" class="menuButton" id="quitGameButton" style="width: 120px; margin: 5px;">Quit</button>
+        </div>
+
+        <div id="gameOver">
+            <h2 style="color: #FF4081">Game Over!</h2>
+            <p>Press Enter to play again</p>
+            <button style="background-color: rgb(7, 110, 150);" class="menuButton" id="quitButton" >Quit</button>
+        </div>
+    </div>
+
+    <!-- Exit confirmation dialog -->
+    <div id="exitDialog">
+        <h2>Are you sure you want to exit?</h2>
+        <p>Your progress will not be saved.</p>
+        <div class="dialogButtons">
+            <button class="dialogButton confirmExit" id="confirmExitButton">Yes, Exit</button>
+            <button class="dialogButton cancelExit" id="cancelExitButton">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Sound effects -->
+    <audio id="eatSound" src="data:audio/wav;base64,UklGRl9vT19XQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YU"></audio>
+
+    
+</body>
+</html>
